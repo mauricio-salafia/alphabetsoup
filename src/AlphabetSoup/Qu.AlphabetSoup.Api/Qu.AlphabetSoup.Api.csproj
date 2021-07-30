@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>91fbb978-8200-4f7c-843d-2deb45c766c2</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
+    <PackageReference Include="NSwag.AspNetCore" Version="13.12.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Qu.AlphabetSoup.Application\Qu.AlphabetSoup.Application.csproj" />
+    <ProjectReference Include="..\Qu.AlphabetSoup.Contract\Qu.AlphabetSoup.Contract.csproj" />
+    <ProjectReference Include="..\Qu.AlphabetSoup.Infrastructure\Qu.AlphabetSoup.Infrastructure.csproj" />
+  </ItemGroup>
+
+
+</Project>
