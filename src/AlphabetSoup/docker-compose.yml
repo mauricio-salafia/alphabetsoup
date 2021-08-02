@@ -1,0 +1,25 @@
+version: '3.4'
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+
+  redis:
+    image: 'bitnami/redis:latest'
+    environment:
+     - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+     - 6379:6379
+    networks:
+     - app-tier
+        
+
+  qu.alphabetsoup.api:
+    image: ${DOCKER_REGISTRY-}qualphabetsoupapi
+    networks:
+     - app-tier
+    build:
+      context: .
+      dockerfile: Qu.AlphabetSoup.Api/Dockerfile

@@ -30,7 +30,7 @@ namespace Qu.AlphabetSoup.Api
             services.AddControllers();
             services.AddSwaggerDocument();
             services.AddApplication();
-            services.AddInfrastructure();
+            services.AddInfrastructure(Configuration);
             services.AddAutoMapper(typeof(Startup));
         }
 
